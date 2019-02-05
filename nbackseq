@@ -1,0 +1,40 @@
+# function  !/usr/bin/env python
+
+import sys
+
+def nbackseq(n, length, words):
+
+    """Generate n-back balanced sequences
+    Parameters
+    n : int
+    how many characters (including the current one) to look back to ssure no duplicates
+    length : int
+    The total length of the sequence to produce
+    words: list of lists
+    A list of words to be used to generate sequences
+
+    Returns
+    list
+        A list of solutions, where each solution is a list of words of length 'length'
+
+
+    """
+
+
+    pass
+
+def test_nbackseq():
+    assert nbackseq(1,1,['a']) == [['a']]
+    assert nbackseq(2, 2, [1, 2]) == [[1, 2],[2, 1]]
+    assert nbackseq(1, 2, [1, 2]) == [[1, 1],[1, 2],[2, 1],[2, 2]]
+    assert nbackseq(2, 1, [1, 2]) == None
+
+
+
+if _name_ == '_main_':
+    print(sys.argv)
+    n = int(sys.argv[1])
+    length = int(sys.argb[2])
+    words = sys.argv[3:]
+
+    print(nbackseq(n, length, words))
